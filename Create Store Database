@@ -1,0 +1,25 @@
+--this creates an inventory table for a skate shop with different products and tracks size, color, price, and inventory.
+
+CREATE TABLE inventory (id INTEGER PRIMARY KEY, name TEXT, price NUMERIC, size TEXT, color TEXT, num_in_stock INTEGER);
+
+--inserting data into table
+INSERT INTO inventory VALUES (1, "99 Wheels", 34.99, "standard", "blue", 12);
+INSERT INTO inventory VALUES (2, "99 Wheels", 34.99, "standard", "red", 16);
+INSERT INTO inventory VALUES (3, "99 Wheels", 34.99, "standard", "green", 8);
+INSERT INTO inventory VALUES (4, "glow wheels", 44.49, "standard", "green", 3);
+INSERT INTO inventory VALUES (5, "glow wheels", 44.49, "standard", "white", 6);
+INSERT INTO inventory VALUES (6, "glow wheels", 44.49, "standard", "blue", 7);
+INSERT INTO inventory VALUES (7, "glow wheels", 44.49, "standard", "purple", 9);
+INSERT INTO inventory VALUES (8, "store sticker", 2.50, "n/a", "logo", 53);
+INSERT INTO inventory VALUES (9, "skate leash", 14.99, "24 inch", "rainbow", 3);
+INSERT INTO inventory VALUES (10, "skate leash", 13.99, "22 inch", "orange", 2);
+INSERT INTO inventory VALUES (11, "bones bearings 8 ct", 28.99, "standard", "n/a", 13);
+INSERT INTO inventory VALUES (12, "store t-shirt", 19.99, "M", "green", 3);
+INSERT INTO inventory VALUES (13, "store t-shirt", 19.99, "L", "green", 2);
+INSERT INTO inventory VALUES (14, "store t-shirt", 19.99, "XL", "green", 4);
+INSERT INTO inventory VALUES (15, "store t-shirt", 19.99, "L", "blue", 5);
+
+--displaying the whole table
+SELECT * FROM inventory ORDER BY price;
+--displaying the total number of items in inventory
+SELECT SUM(num_in_stock) FROM inventory;
